@@ -4,4 +4,5 @@ RUN apt update &&  apt install -y net-tools procps most iproute2  iputils-ping d
 
 RUN apt clean && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+# Modificamos el entrypoint para que al lanzarlo se nos habra FireFox en vez de que quede al pendiente.
+ENTRYPOINT ["firefox"]
